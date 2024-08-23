@@ -1,0 +1,23 @@
+---
+title: "EDS 221 Day 10 Interactive"
+author: "Jordan Sibley"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+```
+
+# Practicing themes 
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  labs(title = "Penguins") +
+  theme(title = element_text(size = 14, color = "slateblue4"),
+        plot.background = element_rect(fill = "lightgrey"),
+        panel.background = element_blank(),
+        panel.grid.major = element_line(color = "darkgrey"))
+```
+
