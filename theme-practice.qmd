@@ -21,6 +21,19 @@ ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
         panel.grid.major = element_line(color = "darkgrey"))
 ```
 
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  labs(title = "Penguins") +
+  theme(title = element_text(size = 16, family = "Courier", color = "#177E89"),
+        plot.background = element_rect(fill = "#FCE9C3"),
+        panel.background = element_rect(fill = "#FDD88E"),
+        axis.text = element_text(color = "#323031"),
+        panel.grid.major = element_line(color = "#DB3A34"),
+        panel.grid.minor = element_line(color = "#F19A97")
+        )
+```
+
 
 # using the theme we created 
 ```{r}
@@ -30,5 +43,37 @@ library(jorsib)
 ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point() +
   theme_purpgrey()
+```
+
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  
+```
+
+#using someone else's theme 
+```{r}
+#devtools::install_github("username/reponame")
+devtools::install_github("nicolelpepper/Rpackagetest")
+```
+
+```{r}
+library(Rpackagetest)
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_eighties()
+```
+
+```{r}
+devtools::install_github("kaimorquecho/eds221day5pack")
+```
+
+```{r}
+library(eds221day5pack)
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_eighties()
+
 ```
 
