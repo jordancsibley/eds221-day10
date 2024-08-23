@@ -15,9 +15,20 @@ library(palmerpenguins)
 ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point() +
   labs(title = "Penguins") +
-  theme(title = element_text(size = 14, color = "slateblue4"),
+  theme(title = element_text(size = 14, color = "#5A4FCF"),
         plot.background = element_rect(fill = "lightgrey"),
         panel.background = element_blank(),
         panel.grid.major = element_line(color = "darkgrey"))
+```
+
+
+# using the theme we created 
+```{r}
+# load in package that contains theme
+library(jorsib)
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_purpgrey()
 ```
 
